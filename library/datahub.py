@@ -1,10 +1,6 @@
 from datetime import datetime, timedelta
 from netCDF4 import Dataset, num2date, date2num, date2index
-import cartopy.crs as ccrs
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import cm, colors
-import cartopy.feature as cf
 import requests
 import re
 import gzip
