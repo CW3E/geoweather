@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta
 from netCDF4 import Dataset, num2date, date2num, date2index
 import numpy as np
-import requests
 import re
 import gzip
 import os
