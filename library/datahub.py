@@ -4,7 +4,6 @@ import numpy as np
 import re
 import gzip
 import os
-import xarray as xr
 import pandas as pd
 import geopandas as gpd
 from geoweather.settings import *
