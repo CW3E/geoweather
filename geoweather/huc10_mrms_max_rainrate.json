@@ -1,0 +1,34 @@
+{  
+
+  "raster_field": {
+                    "filename": "/home/rbatistavilela/work/data/mrms/PrecipRate/{procdate:%Y-%m-%d}/MRMS_PrecipRate_{procdate:%Y%m%d-%H%M%S}.nc",     
+                    "fieldvar": { "name":"rain_rate",
+                                  "unit":"in/h",
+                                  "zlib":"True"
+                                },
+                    "xvar":     { "name":"longitude",
+                                  "unit":"degrees_east",
+                                  "zlib":"True"
+                                },
+                    "yvar":     { "name":"latitude",
+                                  "unit":"degrees_north",
+                                  "zlib":"True"
+                                },
+                    "tvar":     { "name":"time",
+                                  "unit":"minutes since {_times:%Y-%m-%d %H:%M:%S}",
+                                  "zlib":"True"
+                              }
+                            },
+  "geometry_field":{  "filename": "/home/rbatistavilela/work/codes/geoweather/geoweather/geometries/huc10a.geojson"     
+                      
+
+
+                          },
+  "output" : {"filename":"/home/rbatistavilela/work/data/aqpi/huc10_mrms-rainrate.geojson",
+              "js_varname":"geojson_huc10_mrms_rr",
+              "spatial_agg":"max"},
+                        
+  "slack_token_envfile":"/home/rbatistavilela/work/codes/geoweather/geoweather/slack/.env"
+                        
+}
+                        
