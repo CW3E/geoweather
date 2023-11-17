@@ -41,20 +41,17 @@ parser.add_argument("-c", "--configuration",type=str,
 
 parser.add_argument("-f", "--filename",type=str, 
                                         dest='filename', 
-                                        help="MRMS filename", 
+                                        help="raster filename", 
                                         default=None,
                                         required=False)
 
 parser.add_argument("-filetime", "--filetime",  type=str, 
                                                 dest='filetime', 
-                                                help="File time to download YYYYmmddHHMM", 
+                                                help="File time to check for raster file YYYYmmddHHMM", 
                                                 default=None,
                                                 required=False)
 
-parser.add_argument("-i", "--info", action='store_true', 
-                                                dest='info', 
-                                                help="Radar object info", 
-                                                default=False)
+
 
 
 
@@ -67,9 +64,8 @@ if __name__ == "__main__":
     config = json.loads(open(args.config, mode='r').read())
     filename = args.filename   
     filetime = datetime.strptime(args.filetime,'%Y%m%d%H%M')   
-    info = args.info   
     
-    run_process(filename=filename, filetime=filetime, config=config, info=info)
+    run_process(filename=filename, filetime=filetime, config=config)
 
 now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 print("End - {} ({}).".format(now, sys.argv[0]))

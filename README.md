@@ -1,6 +1,6 @@
 
 # geoweather
-    MRMS DECODER reads MRMS products converting them to regular netcdf files
+    GEOWEATHER extracts raster info over geometries and sends alerts through slack API
 ```
     Server: ---
     Status: Development

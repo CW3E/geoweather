@@ -26,7 +26,7 @@ from library import datahub, slackbot
 
 #install sudo apt install libeccodes-tools  
 
-def run_process(filename, filetime, config, info):
+def run_process(filename, filetime, config):
 
     if filename is None:
         filename = datahub.findfile(filetime=filetime, config=config)
